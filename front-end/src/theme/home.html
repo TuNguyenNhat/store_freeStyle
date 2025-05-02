@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/front-end/public/media/icon-logo2.png">
+  <title>Trang chủ</title>
+</head>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  @font-face {
+    font-family: 'BlackItalic';
+    src: url('/front-end/public/font/Be_Vietnam_Pro/BeVietnamPro-BlackItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+  @font-face {
+    font-family: 'Regular';
+    src: url('/front-end/public/font/Be_Vietnam_Pro/BeVietnamPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'SemiBold';
+    src: url('/front-end/public/font/Be_Vietnam_Pro/BeVietnamPro-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+
+  }
+</style>
+
+
+
+<body>
+
+  <header class="bg-white border-b border-gray-200 py-1">
+    <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+          <div style="font-family: 'BlackItalic'; color:#BF2025; line-height: 52px; font-size: 52px; cursor: pointer;">
+            Freestyle
+          </div>
+        </div>
+        <!-- Menu Links (centered) -->
+        <div class="hidden lg:flex lg:space-x-8">
+          <div style="cursor: pointer; margin-right: 20px; font-family: 'SemiBold';">QUẦN</div>
+          <div style="cursor: pointer; margin-right: 20px; font-family: 'SemiBold';">ÁO</div>
+          <div style="cursor: pointer; margin-right: 20px; font-family: 'SemiBold';">PHỤ KIỆN</div>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="relative space-x-8" style=" position: relative; display: flex">
+          <div>
+            <input type="text" placeholder="Bạn đang tìm gì..."
+              style="border: none;outline: none;background-color: #F5F6F5;border-radius: 22px;padding-left: 40px; padding-top: 8px; padding-bottom: 8px; width: 280px; font-size: 16px; font-family: 'Regular';">
+            <div style=" position: absolute; left: 8px; top: 50%; transform: translateY(-50%) ;">
+              <i data-lucide="search"></i>
+            </div>
+          </div>
+          <div class="flex items-center space-x-6">
+            <div class="text-2xl text-gray-600 cursor-pointer">
+              <i data-lucide="user-round"></i>
+            </div>
+            <div class="text-2xl text-gray-600 cursor-pointer">
+              <i data-lucide="shopping-bag"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div>
+    <p class=" mt-2 flex h-10 items-center justify-center  px-4 text-sm font-medium bg-[#FAF3E0] sm:px-6 lg:px-8">
+      Đăng ký ngay để nhận voucher 50.000 VND</p>
+    <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8 my-4">
+      <img src="/front-end/public/media/slider_3.jpg" alt="" class="w-full h-[550px] object-cover mb-5">
+    </div>
+  </div>
+  <div class="bg-white">
+    <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+      <h2 class="text-center text-2xl font-bold tracking-tight text-gray-900 my-10">SẢN PHẨM NỔI BẬT</h2>
+      <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+        <div class="group relative">
+          <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg"
+            alt="Front of men&#039;s Basic Tee in black."
+            class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80">
+          <div class="mt-4 text-center">
+            <div>
+              <h3 class="text-lg text-gray-900 font-Semibold">
+                WILDCLAW TEE
+              </h3>
+            </div>
+            <p class="text-sm  text-gray-900 font-Semibold">420.000 VND</p>
+          </div>
+        </div>
+        <div class="group relative">
+          <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-04.jpg"
+            alt="Front of men&#039;s Basic Tee in black."
+            class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80">
+          <div class="mt-4 text-center">
+            <div>
+              <h3 class="text-lg text-gray-900 font-Semibold">
+                WILDCLAW TEE
+              </h3>
+            </div>
+            <p class="text-sm  text-gray-900 font-Semibold">420.000 VND</p>
+          </div>
+        </div>
+        <div class="group relative">
+          <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-02.jpg"
+            alt="Front of men&#039;s Basic Tee in black."
+            class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80">
+          <div class="mt-4 text-center">
+            <div>
+              <h3 class="text-lg text-gray-900 font-Semibold">
+                WILDCLAW TEE
+              </h3>
+            </div>
+            <p class="text-sm  text-gray-900 font-Semibold">420.000 VND</p>
+          </div>
+        </div>
+        <div class="group relative">
+          <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-03.jpg"
+            alt="Front of men&#039;s Basic Tee in black."
+            class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80">
+          <div class="mt-4 text-center">
+            <div>
+              <h3 class="text-lg text-gray-900 font-Semibold">
+                WILDCLAW TEE
+              </h3>
+            </div>
+            <p class="text-sm  text-gray-900 font-Semibold">420.000 VND</p>
+          </div>
+        </div>
+        <div class="group relative">
+          <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-01.jpg"
+            alt="Front of men&#039;s Basic Tee in black."
+            class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80">
+          <div class="mt-4 text-center">
+            <div>
+              <h3 class="text-lg text-gray-900 font-Semibold">
+                WILDCLAW TEE
+              </h3>
+            </div>
+            <p class="text-sm  text-gray-900 font-Semibold">420.000 VND</p>
+          </div>
+        </div>
+        <div class="group relative">
+          <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-04.jpg"
+            alt="Front of men&#039;s Basic Tee in black."
+            class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80">
+          <div class="mt-4 text-center">
+            <div>
+              <h3 class="text-lg text-gray-900 font-Semibold">
+                WILDCLAW TEE
+              </h3>
+            </div>
+            <p class="text-sm  text-gray-900 font-Semibold">420.000 VND</p>
+          </div>
+        </div>
+        <div class="group relative">
+          <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-02.jpg"
+            alt="Front of men&#039;s Basic Tee in black."
+            class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80">
+          <div class="mt-4 text-center">
+            <div>
+              <h3 class="text-lg text-gray-900 font-Semibold">
+                WILDCLAW TEE
+              </h3>
+            </div>
+            <p class="text-sm  text-gray-900 font-Semibold">420.000 VND</p>
+          </div>
+        </div>
+        <div class="group relative">
+          <img src="https://tailwindcss.com/plus-assets/img/ecommerce-images/product-page-01-related-product-03.jpg"
+            alt="Front of men&#039;s Basic Tee in black."
+            class="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75 lg:aspect-auto lg:h-80">
+          <div class="mt-4 text-center">
+            <div>
+              <h3 class="text-lg text-gray-900 font-Semibold">
+                WILDCLAW TEE
+              </h3>
+            </div>
+            <p class="text-sm  text-gray-900 font-Semibold">420.000 VND</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8 my-14">
+    <h2 class=" text-center text-4xl tracking-tight text-gray-900 border-t py-6  " style="font-family: 'Regular';">Tìm
+      hiểu thêm về Freestyle</h2>
+    <div class="grid grid-cols-4 gap-2">
+      <img src="/front-end/public/media/feedback_3.webp" alt="" class="w-full aspect-square object-cover rounded-xl">
+      <img src="/front-end/public/media/feedback_3.webp" alt="" class="w-full aspect-square object-cover rounded-xl">
+      <img src="/front-end/public/media/feedback_3.webp" alt="" class="w-full aspect-square object-cover rounded-xl">
+      <img src="/front-end/public/media/feedback_3.webp" alt="" class="w-full aspect-square object-cover rounded-xl">
+      <img src="/front-end/public/media/feedback_3.webp" alt="" class="w-full aspect-square object-cover rounded-xl">
+      <img src="/front-end/public/media/feedback_3.webp" alt="" class="w-full aspect-square object-cover rounded-xl">
+      <img src="/front-end/public/media/feedback_3.webp" alt="" class="w-full aspect-square object-cover rounded-xl">
+      <img src="/front-end/public/media/feedback_3.webp" alt="" class="w-full aspect-square object-cover rounded-xl">
+    </div>
+  </div>
+
+  <footer class="bg-[#FAFAFA] border-t border-[#CFD3CB] ">
+    <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8 ">
+      <div class="flex flex-col md:flex-row md:justify-between">
+        <div class="mb-6 md:mb-0 w-80" style="font-family: 'Regular';">
+          <span class="text-4xl" style="font-family: 'BlackItalic'; color:#BF2025">Freestyle</span>
+          <h3 class="text-sm text-gray-900  mt-2" style="font-family: 'SemiBold'; font-weight: bold;">
+            HKD Nguyễn Văn Thành
+          </h3>
+          <div class="text-[8px] text-gray-900">
+            <p>
+              Giấy chứng nhận đăng ký HKD số 17A80041952 do Phòng Tài chính - Kế hoạch, Uỷ ban nhân dân thành phố Thái
+              Nguyên cấp ngày
+              30/5/2019
+            </p>
+            <p>Địa chỉ: Số 235, Đường Quang Trung, Tổ 7, Phường Tân Thịnh, Thành phố Thái Nguyên, Tỉnh Thái Nguyên, Việt
+              Nam</p>
+            <p>Email: freestyle@gmail.com</p>
+            <p>Điện thoại: 0987654321</p>
+          </div>
+          <img src="/front-end/public/media/logo_bct.webp" alt="" class=" h-16 my-2 ">
+        </div>
+        <div class="w-96">
+          <p class="text-sm">Đăng ký nhận bản tin của chúng tôi để nhận thông tin mới
+            nhất
+            về sản phẩm và ưu đãi.</p>
+          <form class="mt-4 flex flex-col gap-2">
+            <input type="email" placeholder="Nhập email của bạn" required
+              class="w-full border-b-2  p-2 text-base bg-transparent outline-none">
+            <button type="submit"
+              class="w-full bg-[#FAF3E0] text-white py-3 px-7 border-none cursor-pointer ] transition-colors duration-300"
+              style="font-family: 'SemiBold'; color: #BF2025;">
+              ĐĂNG KÝ
+            </button>
+          </form>
+          <h2>Theo dõi các nền tảng</h2>
+          <div class="flex gap-4 mt-2">
+            <a href="#" class=""><i data-lucide="facebook"></i></a>
+            <a href="#" class=""><i data-lucide="instagram"></i></a>
+            <a href="#" class=""><i data-lucide="twitter"></i></a>
+            <a href="#" class=""><i data-lucide="tiktok"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-sm  font-Semibold mb-2">Về chúng tôi</h3>
+          <div class="flex flex-col gap-2">
+            <a href="#" class="hover:text-gray-800">Trang chủ</a>
+            <a href="#" class="hover:text-gray-800">Tất cả sản phẩm</a>
+            <a href="#" class="hover:text-gray-800">Bảng size</a>
+            <a href="#" class="hover:text-gray-800">Kiểm tra đơn hàng</a>
+            <a href="#" class="hover:text-gray-800">Hệ thống cửa hàng</a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-sm text-gray-900 font-Semibold mb-2">Chính sách</h3>
+          <div class="flex flex-col gap-2">
+            <a href="#" class="hover:text-gray-800">Chính sách bảo mật</a>
+            <a href="#" class="hover:text-gray-800">Chính sách đổi trả</a>
+            <a href="#" class="hover:text-gray-800">Chính sách vận chuyển</a>
+            <a href="#" class="hover:text-gray-800">Chính sách thanh toán</a>
+            <a href="#" class=" hover:text-gray-800">Chính sách bảo hành</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-4 text-sm text-gray-500 dark:text-gray-400 text-center border-t py-2">
+      © 2025 Thiết kế và phát triển bởi Nguyễn Văn Thành và Nguyễn Nhật Tú.
+    </div>
+  </footer>
+
+</body>
+<script>
+  lucide.createIcons();
+</script>
+
+</html>
