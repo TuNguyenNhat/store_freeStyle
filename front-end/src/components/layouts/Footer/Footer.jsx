@@ -7,7 +7,14 @@ import { Facebook, Instagram, Github, Youtube } from 'lucide-react';
 // Nhúng file style của Footer
 import "./styleFooter.css";
 
+// Nhúng component
+import Album from "../../../pages/Trangchu/components/Album"
+
 const Footer = () => {
+    const location = useLocation();
+
+    const isActive = (path) => location.pathname === path;
+
     return (
         <>
             <footer className="bg-[#FAFAFA] border-t border-[#CFD3CB]">
@@ -56,12 +63,12 @@ const Footer = () => {
                         <div>
                             <h3 class="text-base mb-2" style={{color: '#BF2025', fontWeight: 'bold'}}>Về chúng tôi
                             </h3>
-                            <div class="flex flex-col gap-2 text-sm">
-                                <a href="#" class="hover:text-gray-800">Hệ thống cửa hàng</a>
-                                <a href="#" class="hover:text-gray-800">Trang chủ</a>
-                                <a href="#" class="hover:text-gray-800">Giới thiệu</a>
-                                <a href="#" class="hover:text-gray-800">Album</a>
-                                <a href="#" class="hover:text-gray-800">Blog</a>
+                            <div class="flex flex-col gap-2 text-sm footer-3">
+                                <Link to="/" className={isActive("/") ? "active" : "hover:text-gray-800"}>Trang chủ</Link>
+                                <Link to="/gioithieu" className={isActive("/gioithieu") ? "active" : "hover:text-gray-800"}>Giới thiệu</Link>
+                                <Link to="/album" className={isActive("/album") ? "active" : "hover:text-gray-800"}>Album</Link>
+                                <Link to="/blog" className={isActive("/blog") ? "active" : "hover:text-gray-800"}>Blog</Link>
+                                <Link to="/hethongcuahang" className={isActive("/hethongcuahang") ? "active" : "hover:text-gray-800"}>Hệ thống cửa hàng</Link>
                             </div>
                         </div>
 
