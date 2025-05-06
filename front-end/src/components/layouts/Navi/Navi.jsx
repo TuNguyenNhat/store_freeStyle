@@ -40,7 +40,7 @@ const Navi = () => {
                         </div>
                         <div className="flex items-center space-x-6">
                             <div className="text-2xl text-gray-600 cursor-pointer icon">
-                                <Link to="/taikhoan" className={isActive("/taikhoan") ? "active" : ""}><UserRound/></Link>
+                                <Link to="/dangnhap" className={isActive("/dangnhap") ? "active" : ""}><UserRound/></Link>
                             </div>
                             <div className="text-2xl text-gray-600 cursor-pointer icon">
                                 <Link to="/giohang" className={isActive("/giohang") ? "active" : ""}><ShoppingBag/></Link>
