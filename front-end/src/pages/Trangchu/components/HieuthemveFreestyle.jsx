@@ -6,14 +6,14 @@ const HieuthemveFreestyle = () => {
             </h2>
 
             <div className="grid grid-cols-4 gap-2">
-                <img src="media/feedback_1.jpg" alt="" class="w-full aspect-square object-cover rounded-xl"/>
-                <img src="media/feedback_2.jpg" alt="" class="w-full aspect-square object-cover rounded-xl"/>
-                <img src="media/feedback_3.jpg" alt="" class="w-full aspect-square object-cover rounded-xl"/>
-                <img src="media/feedback_4.jpg" alt="" class="w-full aspect-square object-cover rounded-xl"/>
-                <img src="media/feedback_5.jpg" alt="" class="w-full aspect-square object-cover rounded-xl"/>
-                <img src="media/feedback_6.jpg" alt="" class="w-full aspect-square object-cover rounded-xl"/>
-                <img src="media/feedback_7.jpg" alt="" class="w-full aspect-square object-cover rounded-xl"/>
-                <img src="media/feedback_8.jpg" alt="" class="w-full aspect-square object-cover rounded-xl"/>
+                <img src="media/feedback_1.jpg" alt="" className="w-full aspect-square object-cover rounded-xl"/>
+                <img src="media/feedback_2.jpg" alt="" className="w-full aspect-square object-cover rounded-xl"/>
+                <img src="media/feedback_3.jpg" alt="" className="w-full aspect-square object-cover rounded-xl"/>
+                <img src="media/feedback_4.jpg" alt="" className="w-full aspect-square object-cover rounded-xl"/>
+                <img src="media/feedback_5.jpg" alt="" className="w-full aspect-square object-cover rounded-xl"/>
+                <img src="media/feedback_6.jpg" alt="" className="w-full aspect-square object-cover rounded-xl"/>
+                <img src="media/feedback_7.jpg" alt="" className="w-full aspect-square object-cover rounded-xl"/>
+                <img src="media/feedback_8.jpg" alt="" className="w-full aspect-square object-cover rounded-xl"/>
             </div>
         </div>
     )

@@ -4,7 +4,7 @@ import HieuthemveFreestyle from "./components/HieuthemveFreestyle"
 const Trangchu = () => {
     return (
         <>
-            <p class="mt-2 flex h-10 items-center justify-center px-4 text-sm font-medium bg-[#FAF3E0] sm:px-6 lg:px-8">
+            <p className="mt-2 flex h-10 items-center justify-center px-4 text-sm font-medium bg-[#FAF3E0] sm:px-6 lg:px-8">
                 Đăng ký ngay để nhận các thông tin mới nhất !
             </p>
             <Album/>

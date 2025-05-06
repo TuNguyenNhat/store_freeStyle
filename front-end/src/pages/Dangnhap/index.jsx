@@ -1,5 +1,7 @@
 // Nhúng thư viện react Hooks, react-dom,...
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import axios from "axios";
 
 // Nhúng icon từ thư viện lucide-react đã tải vể
 import { ArrowLeft } from 'lucide-react';
@@ -9,6 +11,45 @@ import { Wrench } from 'lucide-react';
 import "./styleDangnhap.css";
 
 const Dangnhap = () => {
+    const [gmail, set_Gmail] = useState('');
+    const [matkhau, set_Matkhau] = useState('');
+    const [error, set_Error] = useState('');
+
+    const navigate = useNavigate();
+
+    const click_Dangnhap = async (e) => {
+        e.preventDefault();
+
+        try
+        {
+            const response = await axios.post("http://localhost:5000/api/login", {
+                gmail: gmail,
+                matkhau: matkhau
+            });
+
+            // Debug
+            // console.log(response.data);
+
+            if(response.data.message) 
+            {
+                localStorage.setItem("userEmail", gmail);
+                navigate("/");
+            }
+            else
+            {
+                set_Error(response.data.message);
+            }
+
+        }
+        catch(err)
+        {
+            set_Error("Lỗi kết nối đến server");
+        }
+
+        // Debug
+        // console.log({ gmail, matkhau });
+    }
+
     return (
         <>
             <div className="min-h-screen bg-gray-100 flex items-center justify-center ">
@@ -25,13 +66,15 @@ const Dangnhap = () => {
                             <h3 className="mt-6 text-center text-3xl font-extrabold text-gray-900">Đăng Nhập</h3>
                         </div>
 
-                        <form className="mt-8 space-y-6">
+                        <form className="mt-8 space-y-6" onSubmit={click_Dangnhap}>
                             <div className="space-y-1">
                                 <label htmlFor="email" className="block text-sm font-medium text-gray-700">
                                     Email
                                 </label>
                                 <div className="mt-1">
                                     <input
+                                        value={gmail}
+                                        onChange={(e) => set_Gmail(e.target.value)}
                                         id="email"
                                         name="email"
                                         type="email"
@@ -48,6 +91,8 @@ const Dangnhap = () => {
                                 </label>
                                 <div className="mt-1">
                                     <input
+                                        value={matkhau}
+                                        onChange={(e) => set_Matkhau(e.target.value)}
                                         id="password"
                                         name="password"
                                         type="password"
@@ -71,7 +116,7 @@ const Dangnhap = () => {
                             </div>
 
                             {/* Thông báo lỗi */}
-                            <p className="mt-4 text-red-500 text-sm text-center">Mật khẩu hoặc tài khoản sai</p>
+                            <p className="mt-4 text-red-500 text-sm text-center">{error}</p>
 
                             {/* Nút đăng nhập */}
                             <div>

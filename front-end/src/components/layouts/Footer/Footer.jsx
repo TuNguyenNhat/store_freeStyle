@@ -47,11 +47,11 @@ const Footer = () => {
                                         required/>
                                 <button style={{color: '#BF2025', fontWeight: 'bold'}}
                                         type="submit"
-                                        class="w-full bg-[#FAF3E0] text-white py-3 px-7 border-none cursor-pointer transition-colors duration-300">
+                                        className="w-full bg-[#FAF3E0] text-white py-3 px-7 border-none cursor-pointer transition-colors duration-300">
                                     ĐĂNG KÝ
                                 </button>
                             </form>
-                            <h2 class="text-sm">Theo dõi các nền tảng</h2>
+                            <h2 className="text-sm">Theo dõi các nền tảng</h2>
                             <div className='flex gap-4 mt-2'>
                                 <a href=""><Facebook/></a>
                                 <a href=""><Instagram/></a>
@@ -61,9 +61,9 @@ const Footer = () => {
                         </div>
 
                         <div>
-                            <h3 class="text-base mb-2" style={{color: '#BF2025', fontWeight: 'bold'}}>Về chúng tôi
+                            <h3 className="text-base mb-2" style={{color: '#BF2025', fontWeight: 'bold'}}>Về chúng tôi
                             </h3>
-                            <div class="flex flex-col gap-2 text-sm footer-3">
+                            <div className="flex flex-col gap-2 text-sm footer-3">
                                 <Link to="/" className={isActive("/") ? "active" : "hover:text-gray-800"}>Trang chủ</Link>
                                 <Link to="/gioithieu" className={isActive("/gioithieu") ? "active" : "hover:text-gray-800"}>Giới thiệu</Link>
                                 <Link to="/album" className={isActive("/album") ? "active" : "hover:text-gray-800"}>Album</Link>
@@ -73,19 +73,19 @@ const Footer = () => {
                         </div>
 
                         <div>
-                            <h3 class="text-base mb-2" style={{color: '#BF2025', fontWeight: 'bold'}}>Chính sách</h3>
-                            <div class="flex flex-col gap-2 text-sm">
-                                <a href="#" class="hover:text-gray-800">Chính sách bảo mật</a>
-                                <a href="#" class="hover:text-gray-800">Chính sách đổi trả</a>
-                                <a href="#" class="hover:text-gray-800">Chính sách vận chuyển</a>
-                                <a href="#" class="hover:text-gray-800">Chính sách thanh toán</a>
-                                <a href="#" class="hover:text-gray-800">Chính sách bảo hành</a>
+                            <h3 className="text-base mb-2" style={{color: '#BF2025', fontWeight: 'bold'}}>Chính sách</h3>
+                            <div className="flex flex-col gap-2 text-sm">
+                                <a href="#" className="hover:text-gray-800">Chính sách bảo mật</a>
+                                <a href="#" className="hover:text-gray-800">Chính sách đổi trả</a>
+                                <a href="#" className="hover:text-gray-800">Chính sách vận chuyển</a>
+                                <a href="#" className="hover:text-gray-800">Chính sách thanh toán</a>
+                                <a href="#" className="hover:text-gray-800">Chính sách bảo hành</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="mt-4 text-sm text-gray-500  text-center border-t py-2">
+                <div className="mt-4 text-sm text-gray-500  text-center border-t py-2">
                     © 2025 Thiết kế và phát triển bởi <span style={{color: '#BF2025'}}>Nguyễn Văn Thành</span> và <span style={{color: '#BF2025'}}>Nguyễn Nhật Tú</span>
                 </div>
 
