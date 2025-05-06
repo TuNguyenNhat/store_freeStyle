@@ -1,0 +1,1 @@
+đã cài axios, cors, mysql2, express, nodemon nhé Thành 
