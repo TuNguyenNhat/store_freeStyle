@@ -1,12 +1,12 @@
 const authService = require('../service/auth.service');
 
 const loginUser = async (req, res) => {
-    const { gmail, matkhau } = req.body;
-    const results = await authService.login(gmail, matkhau);
+    const { email, matkhau } = req.body;
+    const results = await authService.login(email, matkhau);
 
     if(results.success)
     {
-        res.status(200).json({ message: 'Đăng nhập thành công', user: results.user });
+        res.status(200).json({ message: 'Đăng nhập thành công', account: results.account });
     }
     else
     {

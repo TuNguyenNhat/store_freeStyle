@@ -3,11 +3,11 @@ const conn = require('../../../config/db');
 const login = async (email, password) => {
     try
     {
-        const [users] = await conn.execute(
-            'SELECT gmail, matkhau FROM users WHERE gmail = ?', [email]
+        const [accounts] = await conn.execute(
+            'SELECT email, matkhau FROM taikhoan WHERE email = ?', [email]
         );
 
-        if(users.length === 0)
+        if(accounts.length === 0)
         {
             return {
                 success: false,
@@ -15,9 +15,9 @@ const login = async (email, password) => {
             };
         }
 
-        const user = users[0];
+        const account = accounts[0];
 
-        if(user.matkhau !== password)
+        if(account.matkhau !== password)
         {
             return{
                 success: false,
@@ -28,9 +28,9 @@ const login = async (email, password) => {
         return {
             success: true,
             message: 'Đăng nhập thành công',
-            user: {
-                id: user.id,
-                gmail: user.gmail
+            account: {
+                id: account.id,
+                gmail: account.gmail
             }
         };
     }
