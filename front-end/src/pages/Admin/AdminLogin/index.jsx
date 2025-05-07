@@ -1,5 +1,8 @@
 // Nhúng thư viện react Hooks, react-dom,...
-import { Link, useLocation } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import axios from "axios";
+
 
 // Nhúng icon từ thư viện lucide-react đã tải vể
 import { ArrowLeft } from 'lucide-react';
@@ -8,6 +11,45 @@ import { ArrowLeft } from 'lucide-react';
 import "./styleAdminlogin.css";
 
 const AdminLogin = () => {
+    const [gmail, set_Gmail] = useState('');
+    const [matkhau, set_Matkhau] = useState('');
+    const [error, set_Error] = useState('');
+
+    const navigate = useNavigate();
+
+    const click_Admin_Dangnhap = async (e) => {
+        e.preventDefault();
+
+        try
+        {
+            const response = await axios.post("http://localhost:5000/api/loginAdmin", {
+                email: gmail,
+                matkhau: matkhau
+            });
+
+            // Debug
+            // console.log(response.data);
+
+            if(response.data.message) 
+            {
+                localStorage.setItem("userEmail", gmail);
+                navigate("/dashboard");
+            }
+            else
+            {
+                set_Error(response.data.message);
+            }
+
+        }
+        catch(err)
+        {
+            set_Error("Lỗi kết nối đến server");
+        }
+
+        // Debug
+        // console.log({ gmail, matkhau });
+    }
+
     return (
         <>
             <div className="min-h-screen bg-gray-100 flex items-center justify-center ">
@@ -24,13 +66,15 @@ const AdminLogin = () => {
                             <h3 className="mt-6 text-center text-3xl font-extrabold text-gray-900">Đăng Nhập Vào Dashboard</h3>
                         </div>
 
-                        <form className="mt-8 space-y-6">
+                        <form className="mt-8 space-y-6" onSubmit={click_Admin_Dangnhap}>
                             <div className="space-y-1">
                                 <label htmlFor="email" className="block text-sm font-medium text-gray-700">
                                     Email
                                 </label>
                                 <div className="mt-1">
                                     <input
+                                        value={gmail}
+                                        onChange={(e) => set_Gmail(e.target.value)}
                                         id="email"
                                         name="email"
                                         type="email"
@@ -47,6 +91,8 @@ const AdminLogin = () => {
                                 </label>
                                 <div className="mt-1">
                                     <input
+                                        value={matkhau}
+                                        onChange={(e) => set_Matkhau(e.target.value)}
                                         id="password"
                                         name="password"
                                         type="password"
@@ -58,7 +104,7 @@ const AdminLogin = () => {
                             </div>
 
                             {/* Thông báo lỗi */}
-                            <p className="mt-4 text-red-500 text-sm text-center">Mật khẩu hoặc tài khoản sai</p>
+                            <p className="mt-4 text-red-500 text-sm text-center">{error}</p>
 
                             {/* Nút đăng nhập */}
                             <div>

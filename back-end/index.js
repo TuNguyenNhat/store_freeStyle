@@ -11,6 +11,7 @@ const port = process.env.PORT
 
 //Nhúng file auth.route để định tuyến
 const authRouter = require('./src/modules/auth/router/auth.routes');
+const authAdmin_Router = require('./src/modules/authAdmin/router/authAdmin.route');
 
 const app = express();
 
@@ -19,6 +20,7 @@ app.use(morgan('dev'));
 app.use(express.json());
 
 app.use('/api', authRouter);
+app.use('/api', authAdmin_Router);
 
 app.listen(port, () => {
     console.log(`http://localhost:${port}`);
